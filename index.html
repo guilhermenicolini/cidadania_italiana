@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <h1 id="header">Calculadora de Cidadania</h1>
+    <div>
+      <select id="pessoas">
+        <option value="0">Número de pessoas</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+    </div>
+    <div class="info">
+      <div>
+        <span class="message">Documento Sr. Nicolino:</span>
+        <span id="custo_documento" class="amount">€0</span>
+      </div>
+      <div>
+        <span class="message">Processo:</span>
+        <span id="custo_processo" class="amount">€0</span>
+      </div>
+    </div>
+    <hr />
+    <div class="info">
+      <div>
+        <span class="message">Requerentes:</span>
+        <span id="requerentes" class="amount">€ 0</span>
+      </div>
+      <div>
+        <span class="message">Total por pessoa:</span>
+        <span id="total_pessoa" class="amount">€ 0</span>
+      </div>
+      <div>
+        <span class="message">Primeira parte 50%:</span>
+        <span id="parte_1" class="amount">€ 0</span>
+      </div>
+      <div>
+        <span class="message">Segunda parte 50%</span>
+        <span id="parte_2" class="amount">€ 0</span>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
