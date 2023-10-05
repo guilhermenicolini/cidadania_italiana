@@ -1,7 +1,6 @@
-const custo_requerentes = [0, 5700, 7000, 8000, 9000, 10000, 11000, 12000]
+const custo_requerentes = [0, 5700, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000]
 const custo_documento = 400;
 const custo_processo = 750;
-
 
 const el_custo_documento = document.getElementById("custo_documento");
 const el_custo_processo = document.getElementById("custo_processo");
@@ -15,6 +14,13 @@ const el_parte_2 = document.getElementById("parte_2");
 
 el_custo_documento.innerText = `€ ${custo_documento}`;
 el_custo_processo.innerText = `€ ${custo_processo}`;
+
+for (const v in custo_requerentes) {
+  var option = document.createElement("option");
+  option.text = v;
+  option.valu = v
+  el_pessoas.add(option);
+}
 
 function reset() {
 	el_requerentes.innerText = '€ 0';
