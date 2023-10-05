@@ -36,15 +36,18 @@ pessoas.addEventListener('change', async () => {
   const n = parseInt(el_pessoas.value);
   if (!n) return;
 
+  const euro = await buscar_euro();
+
   el_requerentes.innerText = `€ ${custo_requerentes[n]}`;
   
   const total_pessoa = (custo_documento + custo_processo + custo_requerentes[n]) / n;
-  el_total_pessoa.innerText = `€ ${total_pessoa.toFixed(2)}`;
+  const total_pessoa_real = total_pessoa * euro;
+  el_total_pessoa.innerText = `€ ${total_pessoa.toFixed(2)} / R$ ${total_pessoa_real.toFixed(2)}`;
   
   const parte_1 = total_pessoa * 0.5;
   const parte_2 = total_pessoa * 0.5;
   
-  const euro = await buscar_euro();
+  
   console.log(euro);
   
   const parte1_real = parte_1 * euro;
