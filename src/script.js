@@ -8,6 +8,7 @@ const el_custo_processo = document.getElementById("custo_processo");
 const el_pessoas = document.getElementById("pessoas");
 
 const el_requerentes = document.getElementById("requerentes");
+const el_total = document.getElementById("total");
 const el_total_pessoa = document.getElementById("total_pessoa");
 const el_parte_1 = document.getElementById("parte_1");
 const el_parte_2 = document.getElementById("parte_2");
@@ -40,7 +41,11 @@ pessoas.addEventListener('change', async () => {
 
   el_requerentes.innerText = `€ ${custo_requerentes[n]}`;
   
-  const total_pessoa = (custo_documento + custo_processo + custo_requerentes[n]) / n;
+  const total = custo_documento + custo_processo + custo_requerentes[n];
+  const total_real = total * euro;
+  el_total.innerText = `€ ${total.toFixed(2)} / R$ ${total_real.toFixed(2)}`;
+
+  const total_pessoa = total / n;
   const total_pessoa_real = total_pessoa * euro;
   el_total_pessoa.innerText = `€ ${total_pessoa.toFixed(2)} / R$ ${total_pessoa_real.toFixed(2)}`;
   
